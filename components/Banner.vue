@@ -1,9 +1,9 @@
 <template>
   <div class="flex-row  py-0  md:py-10  lg:py-16  xl:py-16 md:mb-30 pb-20 justify-center px-4  md:px-0 lg:px-0 ">
-      <div class="text-4xl mx-auto pt-0 mt-10 sm:w-11/12 md:w-10/12 lg:w-8/12  xl:w-5/12 2xl:w-5/12 font-extrabold leading-10 text-white ">
+      <div class="text-4xl mx-auto pt-0 mt-10 sm:w-11/12 md:w-10/12 lg:w-8/12  xl:w-6/12 2xl:w-6/12 font-extrabold leading-10 text-white ">
         The best free stock photos & videos shared by talented creators.
       </div>
-      <div class="mx-auto md:max-w-full md:mb-20 md:w-10/12 lg:w-8/12  xl:w-5/12 mt-4  ">
+      <div class="mx-auto md:max-w-full md:mb-20 md:w-10/12 lg:w-8/12  xl:w-6/12  2xl:w-6/12 mt-4  ">
         <div class="  md:my-5 py-0 md:py-2  px-4 pr-0 sm:pr-0  md:pr-0 lg:pr-0 lg:px-4  rounded-lg bg-white searchInput ">
         <input type="text"  placeholder="Search for free videos and photos" class=" text-gray-500 mr-0 md:mr-4 lg:mr-4  xl:mr-4 py-4 lg:py-3 shadow-none  focus:outline-none font-light w-11/12 md:w-11/12 lg:w-11/12 xl:w-11/12 " />
         <i class="las la-search text-sm md:text-xl xl:text-xl pb-1 font-black text-gray-500"> </i> 
