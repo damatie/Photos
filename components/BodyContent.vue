@@ -76,7 +76,7 @@
     text-align: left;
     min-width: 175px;
     color: gray;
-    background: rgb(245, 245, 245);
+    background: rgb(248, 246, 246);
     border: solid 2px rgb(245, 245, 245);
     border-radius: 0.15rem;
     border: 1px solid whitesmoke;
