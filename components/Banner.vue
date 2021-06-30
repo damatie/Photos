@@ -1,6 +1,6 @@
 <template>
   <div class="flex-row  py-0  md:py-10  lg:py-16  xl:py-16 md:mb-30 pb-20 justify-center px-4  md:px-0 lg:px-0 ">
-      <div class="text-4xl mx-auto pt-0 mt-10 sm:w-11/12 md:w-10/12 lg:w-8/12  xl:w-5/12 font-extrabold leading-10 text-white ">
+      <div class="text-4xl mx-auto pt-0 mt-10 sm:w-11/12 md:w-10/12 lg:w-8/12  xl:w-5/12 2xl:w-5/12 font-extrabold leading-10 text-white ">
         The best free stock photos & videos shared by talented creators.
       </div>
       <div class="mx-auto md:max-w-full md:mb-20 md:w-10/12 lg:w-8/12  xl:w-5/12 mt-4  ">
