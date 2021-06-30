@@ -92,7 +92,7 @@
     padding: 0;
     margin: 0;
     /* font-size: 15px; */
-    font-weight: 400;
+    font-weight: 500;
     padding-right: 20px;
     padding-left: 20px;
   }

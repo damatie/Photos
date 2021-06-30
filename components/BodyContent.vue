@@ -3,10 +3,10 @@
     <div class="flex justify-center py-5">
       <div class="w-full sm:w-full md:w-full lg:w-full xl:w-full px-3 lg:px-4 xl:px-5 ">
         <div class="flex xl:mx-auto -mb-3 xl:mb-0 w-full sm:w-full md:w-full lg:w-full  xl:w-full 2xl:w-11/12">
-          <div class=" w-8/12 sm:w-11/12 md:w-11/12 lg:w-11/12 xl:w-11/12 text-xl font-medium">Free Stock Photos</div>
+          <div class=" w-8/12 sm:w-11/12 md:w-11/12 lg:w-11/12 xl:w-11/12 text-xl font-bold">Free Stock Photos</div>
           <div class="  w-4/12 md:w-2/12 lg:w-11/12 xl:w-1/12 leading-7 text-right font-normal ">
             <ul>
-              <li class="dropdown "><a type="button" class="cursor-pointer text-sm font-medium inline-block "> Trending <i class="fas fa-caret-down "></i></a></li>
+              <li class="dropdown "><a type="button" class="cursor-pointer text-sm font-bold inline-block "> Trending <i class="fas fa-caret-down "></i></a></li>
               <div class=" childContainer z-30 w-auto absolute   right-3 xl:right-5  2xl:right-20 py-3 leading-9 pt-2  ">
               <div class="child py-3 z-30">
               <i class="fas fa-sort-up"></i>
@@ -24,7 +24,7 @@
           <div class="columnInner">
           <img class=" mt-3 xl:mt-6" src="../assets/img/photos/ph1.jpeg"/>
           <div class="hiddenFeature flex w-full bg-gradient-to-t from-black to-gray-10 bg-opacity-70 ">
-            <div class="w-8/12 text-white"> user</div>
+            <div class="w-8/12 text-white"><span class=" h-32 w-32 bg-yellow-700"> </span> user</div>
             <div  class="w-4/12"> icon</div>
           </div>
           </div>
