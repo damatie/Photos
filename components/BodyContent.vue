@@ -19,19 +19,33 @@
           </div>
         </div>
         <!-- End Sort -->
-        <div class="flex xl:mx-auto w-full sm:w-full pt-5 xl:pt-0 xl:w-full 2xl:w-11/12  "> 
+        <div class="flex xl:mx-auto w-full sm:w-full pt-5 xl:pt-0 xl:w-full 2xl:w-11/12 font-normal "> 
           <div class=" w-4/12 column mr-3 xl:mr-5">
-          <div class="columnInner">
-          <img class=" mt-3 xl:mt-6" src="../assets/img/photos/ph1.jpeg"/>
-          <div class="hiddenFeature flex w-full bg-gradient-to-t from-black to-gray-10 bg-opacity-70 ">
-            <div class="w-8/12 text-white"><span class=" h-32 w-32 bg-yellow-700"> </span> user</div>
-            <div  class="w-4/12"> icon</div>
+            <div class="columnInner cursor-pointer">
+              <img class=" mt-3 xl:mt-6" src="../assets/img/photos/ph1.jpeg"/>
+              <div class="hiddenFeature flex w-full bg-gradient-to-t from-black to-gray-10 bg-opacity-70 pt-4 pb-4  pl-4 cursor-pointer ">
+                <div class="w-8/12 lg:w-9/12 text-white">
+                <span class=" hidden lg:block ">
+                  <a href="#">
+                      <img class=" inline-block w-10  rounded-2xl" src="../assets/img/user.jpeg"/> 
+                      <span class=" inline-block px-2 "> user </span>
+                  </a>
+                  </span>
+                </div>
+                <div  class="w-3/12 lg:w-3/12 text-white leading-9 text-xl font-bold">
+                <span class="inline-block float-right lg:float-none"><a href="#"><i class="las la-download"></i></a></span>
+                <span class="inline-block"><a href="#"><i class="las la-plus-circle hidden lg:block ml-2 mr-2"></i></a></span>
+                <span class="inline-block"><a href="#"><i class="far fa-heart hidden lg:block "></i></a></span>
+                </div>
+              </div>
+             <!-- End Hidden Features -->
+            </div>
+            <div class="columnInner">
+              <img class=" mt-3 xl:mt-6" src="../assets/img/photos/ph3.jpeg"/>
+            </div>
           </div>
-          </div>
-          <div class="columnInner">
-          <img class=" mt-3 xl:mt-6" src="../assets/img/photos/ph3.jpeg"/>
-          </div>
-          </div>
+          <!-- EndFirst Column -->
+          
 
           <div class=" w-4/12  column xl:mr-5">
           <div class="columnInner ">
@@ -115,7 +129,16 @@
 
 .hiddenFeature{
   position: relative;
-  margin-top: -58px;
-  padding: 20px 20px ;
+  /* padding: 15px 15px ; */
+  margin-top: -68px;
 }
+.hiddenFeature{
+ display: none;
+}
+
+.columnInner:hover .hiddenFeature{
+  display: flex;
+}
+
+
 </style>
