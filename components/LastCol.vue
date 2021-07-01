@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="columnInner cursor-pointer  "  v-for="photo in photos.photos" :key="photo.id">
-      <img class=" mt-3 xl:mt-6 " :src="photo.src.original"/>
+      <img class=" mt-3 xl:mt-6 " :src="photo.src.large2x"/>
       <div class="hiddenFeature sm:flex lg:hidden xl:hidden 2xl:hidden w-full bg-gradient-to-t from-black to-gray-10 bg-opacity-70 pt-4 pb-4  pl-4 cursor-pointer ">
         <div class="w-8/12 lg:w-9/12 text-white">
         <span class=" hidden lg:block ">
@@ -38,7 +38,7 @@
 
     async fetch() {
       let photoList = await fetch(
-        'https://api.pexels.com/v1/search?query=football&per_page=10',{
+        'https://api.pexels.com/v1/search?query=technology&per_page=10',{
           method: 'GET', 
           headers: {
             'Authorization':'563492ad6f91700001000001ddb6c584efa74c9d80065f624f000434',
