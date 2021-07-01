@@ -23,7 +23,8 @@
       <!--End Nav Links -->
     </div>
     <div class=" flex-none leading-1">
-      <a href="#" class=" dropdownMd  pl-0 pr-6 align-bottom text-white hover:text-gray-200   "><i class="las la-ellipsis-h font-extrabold text-3xl "></i></a>
+      <button class="inline-block lg:hidden text-2xl text-white"> <i class="las la-bell mr-3"></i> </button>
+      <a href="#" class=" dropdownMd hidden lg:inline-block xl:inline-block 2xl:inline-block  pl-0 pr-6 align-bottom text-white hover:text-gray-200   "><i class="las la-ellipsis-h font-extrabold text-3xl "></i></a>
       <div class="childMd py-3 leading-9">
         <i class="fas fa-sort-up"></i>
         <a href="#" class="block ">Login</a>
@@ -44,8 +45,10 @@
           <div class="px-1"><a href="#" class="block "><i class="lab la-youtube"></i></a></div>
         </div>
       </div>
-      <a href="#" class="inline-block rounded effect text-base
-    bg-green-600 py-2 text-gray-100 px-7 font-bold hover:bg-green-800">Join</a></div>
+      <button class=" inline-block lg:hidden rounded effect text-xl py-2 text-white px-0 font-bold   "><i class="fas fa-bars "></i></button>
+      <a href="#" class=" hidden lg:inline-block xl:inline-block 2xl:inline-block rounded effect text-base h
+    bg-green-600 py-2 text-gray-100 px-7 font-bold hover:bg-green-800">Join</a>
+    </div>
   </div>
 </template>
 <style scoped>

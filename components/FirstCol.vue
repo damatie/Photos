@@ -2,7 +2,7 @@
   <div>
     <div class="columnInner cursor-pointer"  v-for="photo in photos.photos" :key="photo.id">
       <img class=" mt-3 xl:mt-6" :src="photo.src.large2x"/>
-      <div class="hiddenFeature sm:flex lg:hidden xl:hidden 2xl:hidden w-full bg-gradient-to-t from-black to-gray-10 bg-opacity-70 pt-4 pb-4  pl-4 cursor-pointer ">
+      <div class="hiddenFeature sm:flex lg:hidden xl:hidden 2xl:hidden w-full bg-gradient-to-t from-gray-600 to-gray-5  bg-opacity-5 pt-4 pb-4  pl-4 cursor-pointer ">
         <div class="w-8/12 lg:w-9/12 text-white">
         <span class=" hidden lg:block ">
           <a href="#">
@@ -19,38 +19,56 @@
       </div>
       <!-- End Hidden Features -->
     </div>
+    <div v-observe-visibility="handleScrolledToBottom" ></div>
   </div>
 </template>
 <script>
+import axios from 'axios'
   export default {
     data() {
       return {
-        photos: []
+        photos: [],
+        page:5
       }
     },
 
     activated() {
-      // Call fetch again if last fetch more than 30 sec ago
       if (this.$fetchState.timestamp <= Date.now() - 30000) {
         this.$fetch()
       }
     },
 
-    async fetch() {
-      let photoList = await fetch(
-        'https://api.pexels.com/v1/search?query=ecommerce&per_page=10',{
+    methods: {
+      async fetch() {
+
+      let photoList = await axios.get(
+        `https://api.pexels.com/v1/search?query=dogs&per_page=${this.page}`,{
           method: 'GET', 
           headers: {
             'Authorization':'563492ad6f91700001000001ddb6c584efa74c9d80065f624f000434',
             'Content-Type': 'application/json',
           }
         }
-      ).then(res => res.json())
-    
-      this.photos = photoList
+      )
         // console.log(photoList);
+        this.photos = photoList.data
+      },
 
+      handleScrolledToBottom (isVisible) {
+        if(!isVisible){}
+        this.page++
+
+        this.fetch()
+
+        console.log('abc');
+      }
+    },
+
+    mounted (){
+      this.fetch()
     }
+
+    
   }
 </script>
 

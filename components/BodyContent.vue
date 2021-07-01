@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex justify-center py-5">
+    <div class="flex justify-center py-5 myhight">
       <div class="w-full sm:w-full md:w-full lg:w-full xl:w-full px-3 lg:px-4 xl:px-5 ">
         <div class="flex xl:mx-auto -mb-3 xl:mb-0 w-full sm:w-full md:w-full lg:w-full  xl:w-full 2xl:w-11/12">
           <div class=" w-8/12 sm:w-11/12 md:w-11/12 lg:w-11/12 xl:w-11/12 text-lg font-bold">Free Stock Photos</div>
@@ -41,6 +41,9 @@
 </template>
 
 <style>
+.myhight{
+  height: 1200px;
+}
  .childContainer{
     display: none;
     }
