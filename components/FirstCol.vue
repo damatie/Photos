@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="columnInner cursor-pointer"  v-for="photo in photos.photos" :key="photo.id">
-      <img class=" mt-3 xl:mt-6" :src="photo.src.large"/>
+      <img class=" mt-3 xl:mt-6" :src="photo.src.original"/>
       <div class="hiddenFeature sm:flex lg:hidden xl:hidden 2xl:hidden w-full bg-gradient-to-t from-black to-gray-10 bg-opacity-70 pt-4 pb-4  pl-4 cursor-pointer ">
         <div class="w-8/12 lg:w-9/12 text-white">
         <span class=" hidden lg:block ">
