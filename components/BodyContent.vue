@@ -3,7 +3,7 @@
     <div class="flex justify-center py-5">
       <div class="w-full sm:w-full md:w-full lg:w-full xl:w-full px-3 lg:px-4 xl:px-5 ">
         <div class="flex xl:mx-auto -mb-3 xl:mb-0 w-full sm:w-full md:w-full lg:w-full  xl:w-full 2xl:w-11/12">
-          <div class=" w-8/12 sm:w-11/12 md:w-11/12 lg:w-11/12 xl:w-11/12 text-xl font-bold">Free Stock Photos</div>
+          <div class=" w-8/12 sm:w-11/12 md:w-11/12 lg:w-11/12 xl:w-11/12 text-lg font-bold">Free Stock Photos</div>
           <div class="  w-4/12 md:w-2/12 lg:w-11/12 xl:w-1/12 leading-7 text-right font-normal ">
             <ul>
               <li class="dropdown "><a type="button" class="cursor-pointer text-sm font-bold inline-block "> Trending <i class="fas fa-caret-down "></i></a></li>
@@ -21,47 +21,16 @@
         <!-- End Sort -->
         <div class="flex xl:mx-auto w-full sm:w-full pt-5 xl:pt-0 xl:w-full 2xl:w-11/12 font-normal "> 
           <div class=" w-4/12 column mr-3 xl:mr-5">
-            <div class="columnInner cursor-pointer">
-              <img class=" mt-3 xl:mt-6" src="../assets/img/photos/ph1.jpeg"/>
-              <div class="hiddenFeature flex w-full bg-gradient-to-t from-black to-gray-10 bg-opacity-70 pt-4 pb-4  pl-4 cursor-pointer ">
-                <div class="w-8/12 lg:w-9/12 text-white">
-                <span class=" hidden lg:block ">
-                  <a href="#">
-                      <img class=" inline-block w-10  rounded-2xl" src="../assets/img/user.jpeg"/> 
-                      <span class=" inline-block px-2 "> user </span>
-                  </a>
-                  </span>
-                </div>
-                <div  class="w-3/12 lg:w-3/12 text-white leading-9 text-xl font-bold">
-                <span class="inline-block float-right lg:float-none"><a href="#"><i class="las la-download"></i></a></span>
-                <span class="inline-block"><a href="#"><i class="las la-plus-circle hidden lg:block ml-2 mr-2"></i></a></span>
-                <span class="inline-block"><a href="#"><i class="far fa-heart hidden lg:block "></i></a></span>
-                </div>
-              </div>
-             <!-- End Hidden Features -->
-            </div>
-            <div class="columnInner">
-              <img class=" mt-3 xl:mt-6" src="../assets/img/photos/ph3.jpeg"/>
-            </div>
+            <FirstCol/>
           </div>
           <!-- EndFirst Column -->
-          
 
           <div class=" w-4/12  column xl:mr-5">
-          <div class="columnInner ">
-          <img class=" mt-3 xl:mt-6" src="../assets/img/photos/ph5.jpeg"/>
+            <SecondCol/>
           </div>
-          <div class="columnInner">
-           <img  class="mt-3 xl:mt-6" src="../assets/img/photos/ph6.jpeg"/>
-          </div>
-          </div>
+
           <div class=" w-4/12  hidden xl:block column">
-          <div class="columnInner ">
-           <img class=" mt-3 xl:mt-6" src="../assets/img/photos/ph2.jpeg"/>
-          </div>
-          <div class="columnInner">
-           <img class=" mt-3 xl:mt-6" src="../assets/img/photos/ph4.jpeg"/>
-          </div>
+            <LastCol/>
           </div>
         </div>
         <!-- End Img -->
@@ -71,9 +40,7 @@
   </div>
 </template>
 
-<style scoped>
-  
-
+<style>
  .childContainer{
     display: none;
     }
@@ -132,13 +99,44 @@
   /* padding: 15px 15px ; */
   margin-top: -68px;
 }
-.hiddenFeature{
+/* .hiddenFeature{
  display: none;
-}
+} */
 
 .columnInner:hover .hiddenFeature{
   display: flex;
 }
-
-
 </style>
+<script>
+  export default {
+    data() {
+      return {
+        photos: []
+      }
+    },
+
+    activated() {
+      // Call fetch again if last fetch more than 30 sec ago
+      if (this.$fetchState.timestamp <= Date.now() - 30000) {
+        this.$fetch()
+      }
+    },
+
+    async fetch() {
+      let photoList = await fetch(
+        'https://api.pexels.com/v1/search?query=family&per_page=10',{
+          method: 'GET', 
+          headers: {
+            'Authorization':'563492ad6f91700001000001ddb6c584efa74c9d80065f624f000434',
+            'Content-Type': 'application/json',
+          }
+        }
+      ).then(res => res.json())
+    
+      this.photos = photoList
+        // console.log(photoList);
+
+    }
+  }
+</script>
+
